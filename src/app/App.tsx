@@ -80,7 +80,7 @@ function App() {
           series = [...series, ...search]
         }
 
-        const favorites = JSON.parse(localStorage.getItem('favorites') || "") || [];
+        const favorites = JSON.parse(localStorage.getItem('favorites') || "[]") || [];
         const state = { series, topFiveSeries: topFiveSeries(0, series), loading: true, idx: 0, favorites: favorites }
 
         setData(state);
